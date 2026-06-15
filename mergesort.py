@@ -43,9 +43,21 @@ import matplotlib.pyplot as plt
 
 my_list = [54, 26, 93, 17, 77, 31, 44, 55, 20]
 x = range(len(my_list))
-plt.plot(x, my_list)
+
+# Before sorting
+plt.figure(figsize=(8, 4))
+plt.bar(x, my_list)
+plt.title("Before Merge Sort")
+plt.xlabel("Index")
+plt.ylabel("Value")
 plt.show()
+
 mergeSort(my_list)
-x = range(len(my_list))
-plt.plot(x, my_list)
+
+# After sorting
+plt.figure(figsize=(8, 4))
+plt.bar(x, my_list)
+plt.title("After Merge Sort")
+plt.xlabel("Index")
+plt.ylabel("Value")
 plt.show()
