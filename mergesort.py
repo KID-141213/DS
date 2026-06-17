@@ -70,17 +70,21 @@ if __name__ == "__main__":
     numbers = [54, 26, 93, 17, 77, 31, 44, 55, 20]
 
     x_values = range(len(numbers))
-    plt.plot(x_values, numbers)
 
-    # Improvement 9:
-    # Added plot title.
+    # Before sorting
+    plt.figure(figsize=(8, 4))
+    plt.bar(x_values, numbers)
     plt.title("Before Merge Sort")
+    plt.xlabel("Index")
+    plt.ylabel("Value")
     plt.show()
 
     merge_sort(numbers)
 
-    x_values = range(len(numbers))
-    plt.plot(x_values, numbers)
-
+    # After sorting
+    plt.figure(figsize=(8, 4))
+    plt.bar(x_values, numbers)
     plt.title("After Merge Sort")
+    plt.xlabel("Index")
+    plt.ylabel("Value")
     plt.show()
